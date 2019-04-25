@@ -3,18 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 杜磊的博客
+title: 郭大大的博客
 subtitle: 2019 年目标 深挖底层 掌握原理 冲鸭
 description: 前端开发爱好者
 keywords: 学习
-author: dl
+author: gershonv
 language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 #网址
-url: https://dl-space.github.io
+url: https://gershonv.github.io
 #网站根目录。如果网站是放在子目录中，将root设置成'子目录名'
 root: /
 #文章链接地址格式 。即文章存放的目录。
@@ -99,5 +99,5 @@ baidusitemap:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:dl-space/dl-space.github.io.git
+  repo: git@github.com:gershonv/gershonv.github.io.git
   branch: master
