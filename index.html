@@ -347,6 +347,163 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/12/随笔-如何用es6+写出优雅的js代码/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="杜磊">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="杜磊的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/12/随笔-如何用es6+写出优雅的js代码/" itemprop="url">随笔 - 如何用es6+写出优雅的js代码</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-12T09:59:21+08:00">
+                2018-12-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/开发随笔/" itemprop="url" rel="index">
+                    <span itemprop="name">开发随笔</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>兼容 IE ？不存在的好吗。</p>
+<p>其实使用新语法配合 <code>babel</code> 的转码，已经可以解决这一些问题了。既然如此，那就多使用新语法去探索一下怎么更好的去写代码吧。</p>
+<p>下面分享个人开发中常用的 js 写法技巧，希望对各位有所帮助。</p>
+<h2 id="使用-let-const"><a href="#使用-let-const" class="headerlink" title="使用 let / const"></a>使用 let / const</h2><p><code>var</code> 命令会发生”变量提升“现象，即变量可以在声明之前使用，值为 <code>undefined</code>。这种现象多多少少是有些奇怪的。</p>
+<p>个人认为，对声明的变量确定后面不会发生更改时，即使性能上没有太大提升差异在，但使用 <code>const</code>, 代码的可读性也会增强很多。</p>
+<ul>
+<li><code>const</code> 实际上保证的，并不是变量的值不得改动，而是变量指向的那个内存地址所保存的数据不得改动。</li>
+<li><code>let</code> 变量指向的内存地址，保存的只是一个指向实际数据的指针</li>
+</ul>
+<p>补充 <code>const</code> 定义的变量不是数据不可变，而是保存的引用地址不能发生改变。例子如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123; <span class="attr">age</span>: <span class="number">22</span> &#125;</span><br><span class="line">person.age = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(person.age) <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<p>详情看 <a href="http://es6.ruanyifeng.com/#docs/let" target="_blank" rel="noopener">let 和 const 命令</a></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/12/12/随笔-如何用es6+写出优雅的js代码/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -395,12 +552,21 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
             
 
             
