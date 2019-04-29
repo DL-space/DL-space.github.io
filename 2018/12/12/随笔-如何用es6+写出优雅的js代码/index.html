@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="杜磊的个人博客">
 <meta property="og:description" content="兼容 IE ？不存在的好吗。 其实使用新语法配合 babel 的转码，已经可以解决这一些问题了。既然如此，那就多使用新语法去探索一下怎么更好的去写代码吧。 下面分享个人开发中常用的 js 写法技巧，希望对各位有所帮助。 使用 let / constvar 命令会发生”变量提升“现象，即变量可以在声明之前使用，值为 undefined。这种现象多多少少是有些奇怪的。 个人认为，对声明的变量确定后面不">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-28T12:15:04.804Z">
+<meta property="og:updated_time" content="2019-04-28T12:16:42.515Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="随笔 - 如何用es6+写出优雅的js代码">
 <meta name="twitter:description" content="兼容 IE ？不存在的好吗。 其实使用新语法配合 babel 的转码，已经可以解决这一些问题了。既然如此，那就多使用新语法去探索一下怎么更好的去写代码吧。 下面分享个人开发中常用的 js 写法技巧，希望对各位有所帮助。 使用 let / constvar 命令会发生”变量提升“现象，即变量可以在声明之前使用，值为 undefined。这种现象多多少少是有些奇怪的。 个人认为，对声明的变量确定后面不">
@@ -387,7 +387,7 @@
 <p>减少 <code>if / else</code>地狱般的调用</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [age, name, sex] = [<span class="number">22</span>, <span class="string">'guodada'</span>, <span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (age &gt; <span class="number">10</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (name === <span class="string">'guodada'</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (sex &gt; <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'all right'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 &amp;&amp;</span></span><br><span class="line"><span class="keyword">if</span> (age &gt; <span class="number">10</span> &amp;&amp; name === <span class="string">'guodada'</span> &amp;&amp; sex &gt; <span class="number">0</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'all right'</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 或者(太长了不推荐)</span></span><br><span class="line">age &gt; <span class="number">10</span> &amp;&amp; name === <span class="string">'guodada'</span> &amp;&amp; sex &gt; <span class="number">0</span> &amp;&amp; <span class="built_in">console</span>.log(<span class="string">'all right'</span>)</span><br></pre></td></tr></table></figure>
 <p>提一下 <code>react</code> 的坑点, 在 <code>render</code> 中</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">render()&#123;</span><br><span class="line">  <span class="keyword">const</span> arr = []</span><br><span class="line">  <span class="keyword">return</span> arr.length &amp;&amp; <span class="literal">null</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 渲染出 0 ！</span></span><br><span class="line"><span class="comment">// Boolean / undefind / null / NaN 等才不会渲染。我们可以使用 !! 强制转化为 boolean 解决这个问题</span></span><br><span class="line"><span class="keyword">return</span> !!arr.length &amp;&amp; <span class="literal">null</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 &amp;&amp; 控制组件的渲染</span></span><br><span class="line"><span class="keyword">this</span>.state.visible &amp;&amp; &lt;Modal /&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">render()&#123;</span><br><span class="line">  <span class="keyword">const</span> arr = []</span><br><span class="line">  <span class="keyword">return</span> arr.length &amp;&amp; <span class="literal">null</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 渲染出 0 ！</span></span><br><span class="line"><span class="comment">// Boolean / undefind / null / NaN 等才不会渲染。我们可以使用 !! 强制转化为 boolean 解决这个问题</span></span><br><span class="line"><span class="keyword">return</span> !!arr.length &amp;&amp; <span class="literal">null</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 &amp;&amp; 控制组件的渲染</span></span><br><span class="line"><span class="keyword">this</span>.state.visible &amp;&amp; <span class="xml"><span class="tag">&lt;<span class="name">Modal</span> /&gt;</span></span></span><br></pre></td></tr></table></figure>
 <p>使用 <code>Array.includes</code> 来处理多重条件：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> ages = [<span class="number">18</span>, <span class="number">20</span>, <span class="number">12</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (age === <span class="number">18</span> || age === <span class="number">12</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'match'</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// better</span></span><br><span class="line"><span class="keyword">if</span> ([<span class="number">18</span>, <span class="number">12</span>].includes(age)) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'match'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>如果是较少的判断逻辑则可以使用三元运算符：</p>
@@ -440,6 +440,10 @@
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/23/http-长连接/" rel="next" title="HTTP - keep-alive">
+                <i class="fa fa-chevron-left"></i> HTTP - keep-alive
+              </a>
             
           </div>
 
@@ -528,7 +532,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -539,12 +543,21 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">categories</span>
                 
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
             
 
           </nav>
