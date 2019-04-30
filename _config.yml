@@ -13,18 +13,25 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://dl-space.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
 # Directory
+#资源文件夹，放在里面的文件会上传到github中
 source_dir: source
+#公共文件夹，存放生成的静态文件
 public_dir: public
+#标签文件夹，默认是tags。实际存放在source/tags中。
 tag_dir: tags
+#档案文件夹，默认是archives。
 archive_dir: archives
+#分类文件夹，默认是categories。实际存放在source/categories中。
 category_dir: categories
+#代码文件夹，默认是downloads/code
 code_dir: downloads/code
+#国际化文件夹，默认跟language相同
 i18n_dir: :lang
 skip_render:
 
