@@ -1,7 +1,7 @@
 ---
 title: 随笔 - 如何用es6+写出优雅的js代码
 date: 2018-12-12 09:59:21
-categories: 开发随笔
+categories: javascript
 ---
 
 兼容 IE ？不存在的好吗。
