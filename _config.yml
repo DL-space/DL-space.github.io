@@ -89,3 +89,9 @@ deploy:
   repo: https://github.com/DL-space/DL-space.github.io
   branch: master #published
   message: '部署'
+# 搜索配置
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
