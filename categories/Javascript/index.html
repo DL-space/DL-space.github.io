@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next gemini use-motion" lang>
+<html class="theme-next gemini use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -86,10 +86,10 @@
 <meta name="description" content="前端打杂人员">
 <meta property="og:type" content="website">
 <meta property="og:title" content="杜磊的个人博客">
-<meta property="og:url" content="https://dl-space.github.io/categories/javascript/index.html">
+<meta property="og:url" content="https://dl-space.github.io/categories/Javascript/index.html">
 <meta property="og:site_name" content="杜磊的个人博客">
 <meta property="og:description" content="前端打杂人员">
-<meta property="og:locale" content="default">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杜磊的个人博客">
 <meta name="twitter:description" content="前端打杂人员">
@@ -108,7 +108,7 @@
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://dl-space.github.io/categories/javascript/">
+  <link rel="canonical" href="https://dl-space.github.io/categories/Javascript/">
 
 
 
 
 
-  <title>Category: javascript | 杜磊的个人博客</title>
+  <title>分类: Javascript | 杜磊的个人博客</title>
   
 
 
@@ -140,7 +140,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -231,7 +231,7 @@
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
-            Search
+            搜索
           </a>
         </li>
       
@@ -250,7 +250,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -280,7 +280,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>javascript<small>Category</small>
+        <h1>Javascript<small>分类</small>
         </h1>
       </div>
 
@@ -292,17 +292,43 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2018/12/12/随笔-如何用es6+写出优雅的js代码/" itemprop="url">
+            <a class="post-title-link" href="/2018/11/15/js-深入之继承的多种方式和优缺点/" itemprop="url">
               
-                <span itemprop="name">随笔 - 如何用es6+写出优雅的js代码</span>
+                <span itemprop="name">[转] JavaScript深入之继承的多种方式和优缺点</span>
               
             </a>
         
       </h2>
 
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-12T09:59:21+08:00" content="2018-12-12">
-          12-12
+        <time class="post-time" itemprop="dateCreated" datetime="2018-11-15T14:18:41+08:00" content="2018-11-15">
+          11-15
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2018/11/15/js-深入之闭包/" itemprop="url">
+              
+                <span itemprop="name">[转] JavaScript深入之闭包</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2018-11-15T12:02:32+08:00" content="2018-11-15">
+          11-15
         </time>
       </div>
 
@@ -366,7 +392,7 @@
                 <a href="/archives">
               
                   <span class="site-state-item-count">8</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
@@ -377,7 +403,7 @@
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
                   <span class="site-state-item-count">5</span>
-                  <span class="site-state-item-name">categories</span>
+                  <span class="site-state-item-name">分类</span>
                 </a>
               </div>
             
@@ -388,7 +414,7 @@
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
                   <span class="site-state-item-count">8</span>
-                  <span class="site-state-item-name">tags</span>
+                  <span class="site-state-item-name">标签</span>
                 </a>
               </div>
             
@@ -900,41 +926,6 @@
 
     $('.popup-btn-close').click(onPopupClose);
     $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
-  <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/love.js"></script>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
-</html>
-{
       e.stopPropagation();
     });
     $(document).on('keyup', function (event) {
