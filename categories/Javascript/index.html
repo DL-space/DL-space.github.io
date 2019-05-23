@@ -86,7 +86,7 @@
 <meta name="description" content="前端打杂人员">
 <meta property="og:type" content="website">
 <meta property="og:title" content="杜磊的个人博客">
-<meta property="og:url" content="https://dl-space.github.io/categories/Javascript/index.html">
+<meta property="og:url" content="https://dl-space.github.io/categories/javascript/index.html">
 <meta property="og:site_name" content="杜磊的个人博客">
 <meta property="og:description" content="前端打杂人员">
 <meta property="og:locale" content="zh-Hans">
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://dl-space.github.io/categories/Javascript/">
+  <link rel="canonical" href="https://dl-space.github.io/categories/javascript/">
 
 
 
 
 
-  <title>分类: Javascript | 杜磊的个人博客</title>
+  <title>分类: javascript | 杜磊的个人博客</title>
   
 
 
@@ -280,7 +280,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>Javascript<small>分类</small>
+        <h1>javascript<small>分类</small>
         </h1>
       </div>
 
@@ -292,43 +292,17 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2018/11/15/js-深入之继承的多种方式和优缺点/" itemprop="url">
+            <a class="post-title-link" href="/2018/12/12/随笔-如何用es6+写出优雅的js代码/" itemprop="url">
               
-                <span itemprop="name">[转] JavaScript深入之继承的多种方式和优缺点</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-11-15T14:18:41+08:00" content="2018-11-15">
-          11-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/11/15/js-深入之闭包/" itemprop="url">
-              
-                <span itemprop="name">[转] JavaScript深入之闭包</span>
+                <span itemprop="name">随笔 - 如何用es6+写出优雅的js代码</span>
               
             </a>
         
       </h2>
 
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-11-15T12:02:32+08:00" content="2018-11-15">
-          11-15
+        <time class="post-time" itemprop="dateCreated" datetime="2018-12-12T09:59:21+08:00" content="2018-12-12">
+          12-12
         </time>
       </div>
 
@@ -615,6 +589,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'uGCOOt9FWWFYo6UKxkVx97Kf-gzGzoHsz',
+        appKey: 'jCUDoAX4VTw2K94OjoAkS1mG',
+        placeholder: '留下点东西吧',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
@@ -926,6 +922,41 @@
 
     $('.popup-btn-close').click(onPopupClose);
     $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
+{
       e.stopPropagation();
     });
     $(document).on('keyup', function (event) {
